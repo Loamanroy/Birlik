@@ -49,8 +49,8 @@ Birlik Live предоставляет следующие функции:
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/your-username/birlik-live.git
-   cd birlik-live
+   git clone https://github.com/Loamanroy/birlik.git
+   cd birlik
    ```
 
 2. Установите зависимости:
