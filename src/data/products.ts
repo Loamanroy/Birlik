@@ -149,9 +149,9 @@ export const products: Product[] = [
     category: 'home', 
     image: 'https://images.unsplash.com/photo-1635619833085-06c0269d4578',
     images: [
-      'https://images.unsplash.com/photo-1635619833085-06c0269d4578',
-      'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30',
-      'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30'
+      'https://images.unsplash.com/photo-1536854704214-f489b6693769?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1536854704214-f489b6693769?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1536854704214-f489b6693769?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     ],
     city: 'Караганда',
     address: 'пр. Бухар-Жырау 59',

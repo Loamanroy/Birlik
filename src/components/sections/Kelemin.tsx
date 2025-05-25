@@ -29,14 +29,14 @@ const Kelemin = () => {
           <div className="w-full sm:w-1/2">
             <div className="bg-white rounded-lg overflow-hidden shadow h-48">
               <img 
-                src="https://images.unsplash.com/photo-1542816417-0983674e29d0" 
+                src="https://images.unsplash.com/photo-1611068562065-994ba66501ba?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Путеводитель по Казахстану" 
                 className="w-full h-full object-cover bg-gray-50"
               />
             </div>
             <div className="mt-2">
               <h3 className="text-lg font-medium">Доставка</h3>
-              <p className="text-xs">Бiрiмс доставит д диовеi на</p>
+              <p className="text-xs">Бирлик доставит еду и продукты на дом!</p>
             </div>
           </div>
         </div>
