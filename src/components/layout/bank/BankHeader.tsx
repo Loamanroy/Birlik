@@ -59,6 +59,7 @@ const BankHeader = () => {
               <img
                   src="https://i.pravatar.cc/150?img=3"
                   className="h-8  rounded-full"
+                  alt="avatar"
               />
             </Link>
           </button>
