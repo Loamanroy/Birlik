@@ -27,7 +27,7 @@ const BankHeader = () => {
   };
 
   return (
-      <header className="relative flex items-center justify-between px-4 py-3 border-b shadow-sm">
+      <header className="relative flex items-center justify-between  py-4 border-b shadow-sm lg:px-8 max-w-7xl mx-auto w-full">
         <div className="flex items-center">
           <Link to="/bank" className="mr-8">
             <img

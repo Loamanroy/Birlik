@@ -18,7 +18,7 @@ import ProfilePage from "@/pages/ProfilePage.tsx";
 import NotFoundPage from "@/pages/NotFoundPage.tsx";
 import MainLayout from "@/components/layout/MainLayout.tsx";
 import BankLayout from "@/components/layout/BankLayout.tsx";
-import InternetBank from "@/pages/InternetBank.tsx";
+import InternetBankPage from "@/pages/InternetBankPage.tsx";
 
 function App() {
     return (
@@ -43,7 +43,7 @@ function App() {
                         <Route path="*" element={<NotFoundPage/>}/>
                     </Route>
                     <Route element={<BankLayout/>}>
-                        <Route path="/bank" element={<InternetBank />} />
+                        <Route path="/bank" element={<InternetBankPage />} />
                     </Route>
                 </Routes>
             </LocationProvider>
