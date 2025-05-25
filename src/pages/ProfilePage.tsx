@@ -38,7 +38,7 @@ const ProfilePage = () => {
             <button
                 className="ms-2 px-5 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg shadow hover:shadow-md transition-colors"
             >
-              Мой банк
+              Интернет-Банк
             </button>
           </div>
         </div>
