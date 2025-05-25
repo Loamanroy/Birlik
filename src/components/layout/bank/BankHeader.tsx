@@ -1,4 +1,5 @@
-import { Search, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import mobileBanking from '@/assets/mobile-banking.png';
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -16,12 +17,10 @@ const BankHeader = () => {
 
   const menuItems = [
     { path: '/bank', label: 'Банк' },
-    { path: '/business', label: 'Бизнес' },
-    { path: '/invest/portfolio', label: 'Инвестиции' },
-    { path: '/mobile-operator', label: 'Сим-карта' },
-    { path: '/insurance', label: 'Страхование' },
-    { path: '/travel', label: 'Путешествия' },
-    { path: '/dolyame', label: 'Долями' },
+    { path: '/bank/business', label: 'Бизнес' },
+    { path: '/bank/invest', label: 'Инвестиции' },
+    { path: '/bank/insurance', label: 'Страхование' },
+    { path: '/#', label: 'На главную' },
   ];
 
   const toggleMobileMenu = () => {
@@ -31,10 +30,10 @@ const BankHeader = () => {
   return (
       <header className="relative flex items-center justify-between px-4 py-3 border-b shadow-sm">
         <div className="flex items-center">
-          <Link to="/mybank" className="mr-8">
+          <Link to="/bank" className="mr-8">
             <img
-                src="https://cdn.tbank.ru/static/pfa-multimedia/images/ae288629-59d7-4eb6-b074-8bb0549a43b6.svg"
-                alt="Тинькофф"
+                src={mobileBanking}
+                alt="logo"
                 className="h-8"
             />
           </Link>
@@ -55,7 +54,13 @@ const BankHeader = () => {
         </div>
         <div className="flex items-center space-x-4">
           <button className="p-2 rounded-full hover:bg-gray-100">
-            <Search size={20} />
+
+            <Link to="/profile" className="">
+              <img
+                  src="https://i.pravatar.cc/150?img=3"
+                  className="h-8  rounded-full"
+              />
+            </Link>
           </button>
           <button
               className="md:hidden p-2 rounded-full hover:bg-gray-100"
