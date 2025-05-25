@@ -54,6 +54,7 @@ const Footer = () => {
               <li><Link to="/delivery" className="text-gray-300 hover:text-white">Доставка</Link></li>
               <li><Link to="/social" className="text-gray-300 hover:text-white">Соцсеть</Link></li>
               <li><Link to="/apps" className="text-gray-300 hover:text-white">Приложения</Link></li>
+              <li><Link to="/bank" className="text-gray-300 hover:text-white">Банк</Link></li>
             </ul>
           </div>
           
