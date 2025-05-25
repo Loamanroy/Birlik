@@ -1,7 +1,7 @@
 import { Search, Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import UserAccountMenu from '../user/UserAccountMenu';
-import LocationSelector from '../shared/LocationSelector';
+import UserAccountMenu from '@/components/user/UserAccountMenu';
+import LocationSelector from '@/components/shared/LocationSelector';
 import { useState } from 'react';
 
 const Header = () => {
