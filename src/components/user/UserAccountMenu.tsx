@@ -50,12 +50,13 @@ const UserAccountMenu = () => {
                 Мой профиль
               </Link>
               <Link
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  onClick={() => setIsMenuOpen(false)}
-              >
-                Мой банк
+                to="/bank"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                onClick={() => setIsMenuOpen(false)}
+                >
+                Интернет-Банк
               </Link>
-              <button 
+              <button
                 className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 onClick={handleLogout}
               >
