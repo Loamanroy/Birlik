@@ -20,7 +20,6 @@ const BankHeader = () => {
     { path: '/bank/business', label: 'Бизнес' },
     { path: '/bank/invest', label: 'Инвестиции' },
     { path: '/bank/insurance', label: 'Страхование' },
-    { path: '/#', label: 'На главную' },
   ];
 
   const toggleMobileMenu = () => {
