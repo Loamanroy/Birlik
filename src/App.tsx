@@ -17,6 +17,7 @@ import RegisterPage from './pages/RegisterPage'
 import ForgotPasswordPage from './pages/ForgotPasswordPage'
 import { LocationProvider } from './contexts/LocationContext'
 import ProfilePage from "@/pages/ProfilePage.tsx";
+import NotFoundPage from "@/pages/NotFoundPage.tsx";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/forgot-password" element={<ForgotPasswordPage />} />
               <Route path="/profile" element={<ProfilePage />} />
+              <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>
           <Footer />
