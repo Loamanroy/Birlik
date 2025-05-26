@@ -1,4 +1,7 @@
-import { Link } from 'react-router-dom';
+import TransactionsOverview from "@/components/bank/TransactionsOverview.tsx";
+import PaymentButton from "@/components/bank/PaymentButton.tsx";
+import SearchBox from "@/components/bank/SearchBox.tsx";
+import ProductCard from "@/components/bank/ProductCard.tsx";
 
 function InternetBankPage() {
     const products = [
@@ -91,96 +94,27 @@ function InternetBankPage() {
 
     return (
         <main className="bg-gray-50 min-h-screen pb-8">
-            {/* Заголовок */}
             <div className="container mx-auto px-4 pt-6">
                 <div className="mb-6">
                     <h1 className="text-2xl font-bold">Добрый день</h1>
                 </div>
 
-                {/* Продукты */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-                    <div className="col-span-1 md:col-span-2">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            {products.map(product => (
-                                <div key={product.id} className="bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition-shadow">
-                                    <Link to={product.url} className="flex items-start">
-                                        <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white mr-3">
-                                            <div className="w-6 h-6">
-                                                {product.icon}
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div className="font-medium">{product.title}</div>
-                                            <div className="text-sm text-gray-500">{product.subtitle}</div>
-                                            {product.badge && (
-                                                <span className="inline-block mt-1 px-2 py-0.5 text-xs rounded-full bg-green-100 text-green-800">
-                                                    {product.badge}
-                                                </span>
-                                            )}
-                                        </div>
-                                    </Link>
-                                </div>
-                            ))}
-                        </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {products.map(product => (
+                            <ProductCard key={product.id} product={product} />
+                        ))}
                     </div>
-
-                    {/* Поиск */}
-                    <div className="bg-white rounded-xl shadow-sm p-4">
-                        <div className="relative">
-                            <input
-                                type="text"
-                                placeholder="Поиск"
-                                className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            />
-                            <div className="absolute left-3 top-2.5 text-gray-400">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M15.68 17.182a7.75 7.75 0 0 1-12.427-6.18 7.75 7.75 0 1 1 13.848 4.784l2.718 2.737a1.495 1.495 0 0 1 0 2.116l-.352.36-3.786-3.817Zm1.072-6.18a5.75 5.75 0 1 1-11.498 0 5.75 5.75 0 1 1 11.498 0Z" fill="currentColor"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
+                    <SearchBox />
                 </div>
 
-                {/* Кнопки оплаты */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
                     {paymentOptions.map((option, index) => (
-                        <div key={index} className="bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition-shadow">
-                            <Link to={option.url} className="flex flex-col items-center text-center">
-                                <div className="w-12 h-12 mb-2 flex items-center justify-center">
-                                    <img src={option.icon} alt="" className="w-8 h-8"/>
-                                </div>
-                                <div className="text-sm font-medium">{option.title}</div>
-                            </Link>
-                        </div>
+                        <PaymentButton key={index} option={option} />
                     ))}
                 </div>
 
-                {/* Операции */}
-                <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
-                    <div className="flex justify-between items-center mb-4">
-                        <h2 className="text-lg font-bold">Операции в мае</h2>
-                        <Link to="/bank/transactions" className="text-blue-500 flex items-center">
-                            Все операции
-                            <svg width="16" height="16" viewBox="0 0 7 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1">
-                                <path d="M.293 12.293a1 1 0 1 0 1.414 1.414l5-5a1 1 0 0 0 0-1.414l-5-5A1 1 0 0 0 .293 3.707L4.586 8 .293 12.293Z" fill="currentColor"/>
-                            </svg>
-                        </Link>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2 mb-6">
-                        <button className="px-3 py-1 bg-blue-50 text-blue-600 rounded-lg text-sm font-medium">Траты</button>
-                        <button className="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium">Пополнения</button>
-                    </div>
-
-                    <div className="flex flex-wrap gap-4">
-                        {['Фастфуд', 'Супермаркеты', 'Такси', 'Переводы', 'Развлечения', 'Остальное'].map((category, index) => (
-                            <div key={index} className="px-3 py-2 bg-gray-50 rounded-lg">
-                                <div className="text-sm font-medium">{category}</div>
-                                <div className="text-sm text-gray-500">{Math.floor(Math.random() * 10000)} Т</div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                <TransactionsOverview />
             </div>
         </main>
     );
