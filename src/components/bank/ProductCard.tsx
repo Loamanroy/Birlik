@@ -1,6 +1,16 @@
 import {Link} from "react-router-dom";
 
-function ProductCard({ product }) {
+interface ProductCardProps {
+  product: {
+    url: string;
+    icon: React.ReactNode;
+    title: string;
+    subtitle?: string;
+    badge?: string;
+  };
+}
+
+function ProductCard({ product }: ProductCardProps) {
     return (
         <div className="bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition-shadow">
             <Link to={product.url} className="flex items-start">

@@ -1,6 +1,14 @@
 import {Link} from "react-router-dom";
 
-function PaymentButton({ option }) {
+interface PaymentButtonProps {
+  option: {
+    url: string;
+    icon: string;
+    title: string;
+  };
+}
+
+function PaymentButton({ option }: PaymentButtonProps) {
     return (
         <div className="bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition-shadow">
             <Link to={option.url} className="flex flex-col items-center text-center">
