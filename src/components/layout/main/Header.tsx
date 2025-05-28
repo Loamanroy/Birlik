@@ -3,13 +3,11 @@ import { Link, useLocation } from 'react-router-dom';
 import UserAccountMenu from '@/components/user/UserAccountMenu';
 import LocationSelector from '@/components/shared/LocationSelector';
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const location = useLocation();
   const currentPath = location.pathname;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { t } = useTranslation();
 
   const isActive = (path: string) => {
     if (path === '/' && currentPath === '/') {
@@ -19,14 +17,12 @@ const Header = () => {
   };
 
   const menuItems = [
-    { path: '/', label: t('navigation.home') },
-    { path: '/real-estate', label: t('navigation.real_estate') },
-    { path: '/taxi', label: t('navigation.taxi') },
-    { path: '/market', label: t('navigation.marketplace') },
-    { path: '/bank', label: t('navigation.bank') },
-    { path: '/map', label: t('navigation.logistics') },
-    { path: '/islam', label: t('navigation.islamic_banking') },
-    { path: '/delivery', label: t('navigation.delivery') },
+    { path: '/', label: 'Главная' },
+    { path: '/map', label: 'Карта' },
+    { path: '/market', label: 'Маркет' },
+    { path: '/islam', label: 'Islam' },
+    { path: '/kelemin', label: 'Kelemin' },
+    { path: '/delivery', label: 'Доставка' },
     { path: '/social', label: 'Соцсеть' },
     { path: '/apps', label: 'Приложения' },
   ];
@@ -36,18 +32,16 @@ const Header = () => {
   };
 
   return (
-    <header className="relative flex items-center justify-between px-4 py-3 border-b shadow-sm bg-white">
+    <header className="relative flex items-center justify-between px-4 py-3 border-b shadow-sm">
       <div className="flex items-center">
-        <Link to="/" className="text-2xl font-bold mr-8 text-blue-600">Birlik Live</Link>
+        <Link to="/" className="text-2xl font-bold mr-8">Birlik Live</Link>
         <nav className="hidden md:flex">
           <ul className="flex space-x-6">
             {menuItems.map((item) => (
               <li key={item.path}>
                 <Link 
                   to={item.path} 
-                  className={`text-sm font-medium ${isActive(item.path) 
-                    ? 'text-blue-600 border-b-2 border-blue-500' 
-                    : 'text-gray-700 hover:text-blue-500'}`}
+                  className={`text-sm font-medium ${isActive(item.path) ? 'border-b-2 border-blue-500' : 'hover:text-blue-500'}`}
                 >
                   {item.label}
                 </Link>
@@ -59,7 +53,7 @@ const Header = () => {
       <div className="flex items-center space-x-4">
         <LocationSelector />
         <button className="p-2 rounded-full hover:bg-gray-100">
-          <Search size={20} className="text-gray-600" />
+          <Search size={20} />
         </button>
         <UserAccountMenu />
         <button 
@@ -79,9 +73,7 @@ const Header = () => {
                 <li key={item.path}>
                   <Link 
                     to={item.path} 
-                    className={`block px-4 py-2 text-sm font-medium ${isActive(item.path) 
-                      ? 'bg-blue-50 text-blue-600 border-l-4 border-blue-500' 
-                      : 'text-gray-700 hover:bg-gray-50 hover:text-blue-500'}`}
+                    className={`block px-4 py-2 text-sm font-medium ${isActive(item.path) ? 'bg-blue-50 text-blue-500 border-l-4 border-blue-500' : 'hover:bg-gray-50'}`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.label}

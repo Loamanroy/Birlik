@@ -3,8 +3,6 @@ import './App.css'
 import HomePage from './pages/HomePage'
 import MapPage from './pages/MapPage'
 import MarketPage from './pages/MarketPage'
-import ProductPage from './pages/ProductPage'
-import AddProductPage from './pages/AddProductPage'
 import IslamPage from './pages/IslamPage'
 import KeleminPage from './pages/KeleminPage'
 import DeliveryPage from './pages/DeliveryPage'
@@ -42,11 +40,6 @@ function App() {
                     <Route element={<MainLayout/>}>
                         <Route path="/" element={<HomePage/>}/>
                         <Route path="/map" element={<MapPage/>}/>
-                        <Route path="/market" element={<MarketPage/>}/>
-                        <Route path="/market/product/:id" element={<ProductPage/>}/>
-                        <Route path="/market/add" element={<AddProductPage/>}/>
-                        <Route path="/real-estate" element={<RealEstatePage/>}/>
-                        <Route path="/taxi" element={<TaxiPage/>}/>
                         <Route path="/islam" element={<IslamPage/>}/>
                         <Route path="/kelemin" element={<KeleminPage/>}/>
                         <Route path="/delivery" element={<DeliveryPage/>}/>
@@ -71,6 +64,9 @@ function App() {
                         <Route path="/bank/pay/qr" element={<PayQRPage />} />
                         <Route path="/bank/transactions" element={<TransactionsPage />} />
                         <Route path="/bank/business" element={<BusinessPage />} />
+                        <Route path="/bank/real-estate" element={<RealEstatePage />} />
+                        <Route path="/bank/taxi" element={<TaxiPage />} />
+                        <Route path="/bank/marketplace" element={<MarketPage />} />
                     </Route>
                 </Routes>
             </LocationProvider>
