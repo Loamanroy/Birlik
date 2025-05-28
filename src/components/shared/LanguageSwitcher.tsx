@@ -30,7 +30,6 @@ function LanguageSwitcher() {
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="text-lg">{currentLanguage.flag}</span>
-        <span className="text-sm font-medium">{currentLanguage.code.toUpperCase()}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
