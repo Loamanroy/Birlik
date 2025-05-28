@@ -19,6 +19,8 @@ import NotFoundPage from "@/pages/NotFoundPage.tsx";
 import MainLayout from "@/components/layout/MainLayout.tsx";
 import BankLayout from "@/components/layout/BankLayout.tsx";
 import InternetBankPage from "@/pages/InternetBankPage.tsx";
+import RealEstatePage from "@/pages/RealEstatePage.tsx";
+import TaxiPage from "@/pages/TaxiPage.tsx";
 
 import InsurancePage from "@/pages/bank/InsurancePage.tsx";
 import MobilePage from "@/pages/bank/MobilePage.tsx";
@@ -43,6 +45,8 @@ function App() {
                         <Route path="/market" element={<MarketPage/>}/>
                         <Route path="/market/product/:id" element={<ProductPage/>}/>
                         <Route path="/market/add" element={<AddProductPage/>}/>
+                        <Route path="/real-estate" element={<RealEstatePage/>}/>
+                        <Route path="/taxi" element={<TaxiPage/>}/>
                         <Route path="/islam" element={<IslamPage/>}/>
                         <Route path="/kelemin" element={<KeleminPage/>}/>
                         <Route path="/delivery" element={<DeliveryPage/>}/>
