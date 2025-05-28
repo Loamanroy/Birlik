@@ -2,11 +2,14 @@ import { Menu, X } from 'lucide-react';
 import mobileBanking from '@/assets/mobile-banking.png';
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '@/components/shared/LanguageSwitcher';
 
 const BankHeader = () => {
   const location = useLocation();
   const currentPath = location.pathname;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const isActive = (path: string) => {
     if (path === '/bank' && currentPath === '/bank') {
@@ -16,10 +19,10 @@ const BankHeader = () => {
   };
 
   const menuItems = [
-    { path: '/bank', label: 'Банк' },
-    { path: '/bank/business', label: 'Бизнес' },
-    { path: '/bank/invest', label: 'Инвестиции' },
-    { path: '/bank/insurance', label: 'Страхование' },
+    { path: '/bank', label: t('bank.title') },
+    { path: '/bank/business', label: t('bank.business') },
+    { path: '/bank/invest', label: t('bank.investments') },
+    { path: '/bank/insurance', label: t('bank.insurance') },
   ];
 
   const toggleMobileMenu = () => {
@@ -52,8 +55,8 @@ const BankHeader = () => {
           </nav>
         </div>
         <div className="flex items-center space-x-4">
+          <LanguageSwitcher />
           <button className="p-2 rounded-full hover:bg-gray-100">
-
             <Link to="/profile" className="">
               <img
                   src="https://i.pravatar.cc/150?img=3"
