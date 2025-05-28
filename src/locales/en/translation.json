@@ -114,22 +114,32 @@
     "monthly_interest": "Monthly Interest Accrual",
     "transfers": "Transfers",
     "payments": "Payments",
+    "profile": "Profile",
+    "logout": "Logout",
     "nft_wallet": {
       "title": "NFT Passport",
       "connect_wallet": "Connect Wallet",
-      "disconnect_wallet": "Disconnect",
+      "disconnect": "Disconnect",
       "passport_id": "Passport ID",
       "verification_status": "Verification Status",
       "wallet_address": "Wallet Address",
       "verified": "Verified",
       "not_verified": "Not Verified",
       "connect_prompt": "Connect your crypto wallet to access your NFT passport",
-      "wallet_options": "Connect Wallet",
-      "metamask": "MetaMask",
-      "walletconnect": "WalletConnect",
-      "coinbase": "Coinbase Wallet",
-      "trust": "Trust Wallet"
+      "passport_description": "Your NFT passport contains your verified digital identity that can be used across the Birlik platform for secure authentication.",
+      "select_wallet": "Select a wallet to connect and access your NFT passport",
+      "digital_passport": "Digital Passport",
+      "level": "Level",
+      "document_type": "Document Type",
+      "nationality": "Nationality",
+      "issued_by": "Issued By",
+      "issued_date": "Issued Date",
+      "expiry_date": "Expiry Date"
     }
+  },
+  "crypto": {
+    "loading": "Loading cryptocurrency rates...",
+    "error": "Failed to load data"
   },
   "real_estate": {
     "title": "Real Estate Dashboard",

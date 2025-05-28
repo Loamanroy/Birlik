@@ -112,22 +112,32 @@
     "monthly_interest": "Ежемесячное начисление процентов",
     "transfers": "Переводы",
     "payments": "Платежи",
+    "profile": "Профиль",
+    "logout": "Выйти",
     "nft_wallet": {
       "title": "NFT Паспорт",
       "connect_wallet": "Подключить кошелек",
-      "disconnect_wallet": "Отключить",
+      "disconnect": "Отключить",
       "passport_id": "ID паспорта",
       "verification_status": "Статус верификации",
       "wallet_address": "Адрес кошелька",
       "verified": "Верифицирован",
       "not_verified": "Не верифицирован",
       "connect_prompt": "Подключите криптокошелек для доступа к NFT паспорту",
-      "wallet_options": "Подключить кошелек",
-      "metamask": "MetaMask",
-      "walletconnect": "WalletConnect",
-      "coinbase": "Coinbase Wallet",
-      "trust": "Trust Wallet"
+      "passport_description": "Ваш NFT паспорт содержит вашу верифицированную цифровую личность, которая может использоваться на платформе Бирлик для безопасной аутентификации.",
+      "select_wallet": "Выберите кошелек для подключения и доступа к вашему NFT паспорту",
+      "digital_passport": "Цифровой паспорт",
+      "level": "Уровень",
+      "document_type": "Тип документа",
+      "nationality": "Гражданство",
+      "issued_by": "Кем выдан",
+      "issued_date": "Дата выдачи",
+      "expiry_date": "Срок действия"
     }
+  },
+  "crypto": {
+    "loading": "Загрузка курсов криптовалют...",
+    "error": "Ошибка загрузки данных"
   },
   "real_estate": {
     "title": "Недвижимость",

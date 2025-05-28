@@ -67,6 +67,8 @@ function App() {
                         <Route path="/bank/real-estate" element={<RealEstatePage />} />
                         <Route path="/bank/taxi" element={<TaxiPage />} />
                         <Route path="/bank/marketplace" element={<MarketPage />} />
+                        <Route path="/bank/login" element={<LoginPage />} />
+                        <Route path="/bank/register" element={<RegisterPage />} />
                     </Route>
                 </Routes>
             </LocationProvider>
