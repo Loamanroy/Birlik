@@ -4,9 +4,9 @@ import Footer from "@/components/layout/main/Footer.tsx";
 
 const BankLayout = () => {
     return (
-        <div className="min-h-screen bg-gray-50 flex flex-col">
+        <div className="min-h-screen bg-white flex flex-col">
             <BankHeader/>
-            <main className="flex-grow max-w-7xl mx-auto w-full">
+            <main className="flex-grow max-w-7xl mx-auto w-full px-4 py-6">
                 <Outlet/>
             </main>
             <Footer />

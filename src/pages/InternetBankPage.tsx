@@ -112,10 +112,10 @@ function InternetBankPage() {
     ];
 
     return (
-        <main className="bg-gray-50 min-h-screen pb-8">
+        <main className="bg-white min-h-screen pb-8">
             <div className="container mx-auto px-4 pt-6">
                 <div className="mb-6">
-                    <h1 className="text-2xl font-bold">{t('bank.title')}</h1>
+                    <h1 className="text-2xl font-bold text-blue-600">{t('bank.title')}</h1>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
