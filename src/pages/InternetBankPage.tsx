@@ -2,6 +2,7 @@ import TransactionsOverview from "@/components/bank/TransactionsOverview.tsx";
 import PaymentButton from "@/components/bank/PaymentButton.tsx";
 import SearchBox from "@/components/bank/SearchBox.tsx";
 import ProductCard from "@/components/bank/ProductCard.tsx";
+import NFTWallet from "@/components/bank/NFTWallet.tsx";
 import { useTranslation } from 'react-i18next';
 
 function InternetBankPage() {
@@ -132,8 +133,15 @@ function InternetBankPage() {
                         <PaymentButton key={index} option={option} />
                     ))}
                 </div>
-
-                <TransactionsOverview />
+                
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                    <div className="lg:col-span-2">
+                        <TransactionsOverview />
+                    </div>
+                    <div className="lg:col-span-1">
+                        <NFTWallet />
+                    </div>
+                </div>
             </div>
         </main>
     );
