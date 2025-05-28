@@ -31,6 +31,12 @@ import PayMobilePage from "@/pages/bank/PayMobilePage.tsx";
 import PayQRPage from "@/pages/bank/PayQRPage.tsx";
 import TransactionsPage from "@/pages/bank/TransactionsPage.tsx";
 import BusinessPage from "@/pages/bank/BusinessPage.tsx";
+import DigitalBankingPage from "./pages/bank/DigitalBankingPage";
+import AutomotivePage from "./pages/bank/AutomotivePage";
+import LogisticsPage from "./pages/bank/LogisticsPage";
+import ExchangePage from "./pages/bank/ExchangePage";
+import IslamicBankingPage from "./pages/bank/IslamicBankingPage";
+import BankDeliveryPage from "./pages/bank/DeliveryPage";
 
 function App() {
     return (
@@ -67,6 +73,12 @@ function App() {
                         <Route path="/bank/real-estate" element={<RealEstatePage />} />
                         <Route path="/bank/taxi" element={<TaxiPage />} />
                         <Route path="/bank/marketplace" element={<MarketPage />} />
+                        <Route path="/bank/digital" element={<DigitalBankingPage />} />
+                        <Route path="/bank/automotive" element={<AutomotivePage />} />
+                        <Route path="/bank/logistics" element={<LogisticsPage />} />
+                        <Route path="/bank/exchange" element={<ExchangePage />} />
+                        <Route path="/bank/islamic" element={<IslamicBankingPage />} />
+                        <Route path="/bank/delivery" element={<BankDeliveryPage />} />
                         <Route path="/bank/login" element={<LoginPage />} />
                         <Route path="/bank/register" element={<RegisterPage />} />
                     </Route>
