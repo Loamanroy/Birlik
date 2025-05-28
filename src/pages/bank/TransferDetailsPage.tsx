@@ -1,34 +1,44 @@
+import { useTranslation } from 'react-i18next';
+
 function TransferDetailsPage() {
+    const { i18n } = useTranslation();
+    
     return (
         <div className="container mx-auto px-4 pt-6">
             <div className="mb-6">
-                <h1 className="text-2xl font-bold">Перевод по реквизитам</h1>
-                <p className="text-gray-600 mt-2">Перевод денег по банковским реквизитам</p>
+                <h1 className="text-2xl font-bold">
+                    {i18n.language === 'en' ? 'Bank Transfer Details' : 'Перевод по реквизитам'}
+                </h1>
+                <p className="text-gray-600 mt-2">
+                    {i18n.language === 'en' ? 'Money transfer using bank details' : 'Перевод денег по банковским реквизитам'}
+                </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div className="bg-white rounded-xl shadow-sm p-6">
-                    <h2 className="text-lg font-bold mb-4">Новый перевод</h2>
+                    <h2 className="text-lg font-bold mb-4">
+                    {i18n.language === 'en' ? 'New Transfer' : 'Новый перевод'}
+                </h2>
                     <form>
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="bank">
-                                Банк получателя
+                                {i18n.language === 'en' ? 'Recipient Bank' : 'Банк получателя'}
                             </label>
                             <select
                                 className="appearance-none border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 id="bank"
                             >
-                                <option>Выберите банк</option>
+                                <option>{i18n.language === 'en' ? 'Select bank' : 'Выберите банк'}</option>
                                 <option>Birlik Bank</option>
-                                <option>Казкоммерцбанк</option>
-                                <option>Народный Банк</option>
-                                <option>Сбербанк</option>
-                                <option>Другой банк</option>
+                                <option>{i18n.language === 'en' ? 'Kazkommertsbank' : 'Казкоммерцбанк'}</option>
+                                <option>{i18n.language === 'en' ? 'Halyk Bank' : 'Народный Банк'}</option>
+                                <option>Sberbank</option>
+                                <option>{i18n.language === 'en' ? 'Other bank' : 'Другой банк'}</option>
                             </select>
                         </div>
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="account">
-                                Номер счета / IBAN
+                                {i18n.language === 'en' ? 'Account Number / IBAN' : 'Номер счета / IBAN'}
                             </label>
                             <input
                                 className="appearance-none border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -39,7 +49,7 @@ function TransferDetailsPage() {
                         </div>
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="bic">
-                                БИК / SWIFT
+                                {i18n.language === 'en' ? 'BIC / SWIFT' : 'БИК / SWIFT'}
                             </label>
                             <input
                                 className="appearance-none border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -50,18 +60,18 @@ function TransferDetailsPage() {
                         </div>
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="recipient">
-                                ФИО получателя
+                                {i18n.language === 'en' ? 'Recipient Name' : 'ФИО получателя'}
                             </label>
                             <input
                                 className="appearance-none border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 id="recipient"
                                 type="text"
-                                placeholder="Иванов Иван Иванович"
+                                placeholder={i18n.language === 'en' ? 'John Smith' : 'Иванов Иван Иванович'}
                             />
                         </div>
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="amount">
-                                Сумма перевода
+                                {i18n.language === 'en' ? 'Transfer Amount' : 'Сумма перевода'}
                             </label>
                             <div className="flex">
                                 <input
@@ -77,31 +87,31 @@ function TransferDetailsPage() {
                         </div>
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="purpose">
-                                Назначение платежа
+                                {i18n.language === 'en' ? 'Payment Purpose' : 'Назначение платежа'}
                             </label>
                             <textarea
                                 className="appearance-none border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 id="purpose"
                                 rows={3}
-                                placeholder="Укажите назначение платежа"
+                                placeholder={i18n.language === 'en' ? 'Enter payment purpose' : 'Укажите назначение платежа'}
                             ></textarea>
                         </div>
                         <div className="flex justify-between items-center">
                             <div className="text-sm text-gray-500">
-                                Комиссия: <span className="font-medium">150 ₸</span>
+                                {i18n.language === 'en' ? 'Commission: ' : 'Комиссия: '}<span className="font-medium">150 ₸</span>
                             </div>
                             <button
                                 className="px-4 py-2 bg-blue-500 text-white rounded-lg"
                                 type="submit"
                             >
-                                Перевести
+                                {i18n.language === 'en' ? 'Transfer' : 'Перевести'}
                             </button>
                         </div>
                     </form>
                 </div>
 
                 <div className="bg-white rounded-xl shadow-sm p-6">
-                    <h2 className="text-lg font-bold mb-4">Шаблоны переводов</h2>
+                    <h2 className="text-lg font-bold mb-4">{i18n.language === 'en' ? 'Transfer Templates' : 'Шаблоны переводов'}</h2>
                     <div className="space-y-3">
                         {[
                             {
@@ -140,32 +150,32 @@ function TransferDetailsPage() {
                     </div>
                     <div className="mt-4">
                         <button className="w-full px-4 py-2 border border-gray-300 text-gray-700 rounded-lg">
-                            Все шаблоны
+                            {i18n.language === 'en' ? 'All Templates' : 'Все шаблоны'}
                         </button>
                     </div>
                 </div>
             </div>
 
             <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
-                <h2 className="text-lg font-bold mb-4">История переводов</h2>
+                <h2 className="text-lg font-bold mb-4">{i18n.language === 'en' ? 'Transfer History' : 'История переводов'}</h2>
                 <div className="overflow-x-auto">
                     <table className="min-w-full divide-y divide-gray-200">
                         <thead className="bg-gray-50">
                             <tr>
                                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Дата
+                                    {i18n.language === 'en' ? 'Date' : 'Дата'}
                                 </th>
                                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Получатель
+                                    {i18n.language === 'en' ? 'Recipient' : 'Получатель'}
                                 </th>
                                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Счет
+                                    {i18n.language === 'en' ? 'Account' : 'Счет'}
                                 </th>
                                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Сумма
+                                    {i18n.language === 'en' ? 'Amount' : 'Сумма'}
                                 </th>
                                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Статус
+                                    {i18n.language === 'en' ? 'Status' : 'Статус'}
                                 </th>
                             </tr>
                         </thead>
@@ -208,7 +218,7 @@ function TransferDetailsPage() {
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-sm">
                                         <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                            {transfer.status}
+                                            {i18n.language === 'en' ? 'Completed' : transfer.status}
                                         </span>
                                     </td>
                                 </tr>
