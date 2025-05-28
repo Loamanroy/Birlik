@@ -10,7 +10,9 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "cookies": "Cookies",
-    "connect": "Connect"
+    "connect": "Connect",
+    "login": "Login",
+    "register": "Register"
   },
   "navigation": {
     "home": "Home",
@@ -203,28 +205,5 @@
     "condition": "Condition",
     "posted_date": "Posted Date",
     "similar_products": "Similar Products"
-  },
-  "common": {
-    "search": "Search",
-    "all_rights_reserved": "All rights reserved",
-    "footer_description": "Birlik - Your Universal Financial Platform",
-    "services": "Services",
-    "company": "Company",
-    "about": "About",
-    "careers": "Careers",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "cookies": "Cookies",
-    "connect": "Connect",
-    "no_items_available": "No items available",
-    "loading": "Loading...",
-    "error_occurred": "An error occurred",
-    "try_again": "Try Again",
-    "cancel": "Cancel",
-    "save": "Save",
-    "delete": "Delete",
-    "edit": "Edit",
-    "view": "View",
-    "close": "Close"
   }
 }
