@@ -109,6 +109,8 @@
     "interest_accrual": "Начисление %",
     "withdrawal": "Снятие",
     "show_all_operations": "Показать все операции",
-    "monthly_interest": "Ежемесячное начисление процентов"
+    "monthly_interest": "Ежемесячное начисление процентов",
+    "transfers": "Переводы",
+    "payments": "Платежи"
   }
 }

@@ -109,6 +109,8 @@
     "interest_accrual": "Interest Accrual",
     "withdrawal": "Withdrawal",
     "show_all_operations": "Show All Operations",
-    "monthly_interest": "Monthly Interest Accrual"
+    "monthly_interest": "Monthly Interest Accrual",
+    "transfers": "Transfers",
+    "payments": "Payments"
   }
 }
