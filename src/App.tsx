@@ -20,6 +20,18 @@ import MainLayout from "@/components/layout/MainLayout.tsx";
 import BankLayout from "@/components/layout/BankLayout.tsx";
 import InternetBankPage from "@/pages/InternetBankPage.tsx";
 
+import InsurancePage from "@/pages/bank/InsurancePage.tsx";
+import MobilePage from "@/pages/bank/MobilePage.tsx";
+import InvestPage from "@/pages/bank/InvestPage.tsx";
+import SelfEmployedPage from "@/pages/bank/SelfEmployedPage.tsx";
+import SavingsPage from "@/pages/bank/SavingsPage.tsx";
+import TransferPhonePage from "@/pages/bank/TransferPhonePage.tsx";
+import TransferDetailsPage from "@/pages/bank/TransferDetailsPage.tsx";
+import PayMobilePage from "@/pages/bank/PayMobilePage.tsx";
+import PayQRPage from "@/pages/bank/PayQRPage.tsx";
+import TransactionsPage from "@/pages/bank/TransactionsPage.tsx";
+import BusinessPage from "@/pages/bank/BusinessPage.tsx";
+
 function App() {
     return (
         <BrowserRouter>
@@ -44,6 +56,17 @@ function App() {
                     </Route>
                     <Route element={<BankLayout/>}>
                         <Route path="/bank" element={<InternetBankPage />} />
+                        <Route path="/bank/insurance" element={<InsurancePage />} />
+                        <Route path="/bank/mobile" element={<MobilePage />} />
+                        <Route path="/bank/invest" element={<InvestPage />} />
+                        <Route path="/bank/self-employed" element={<SelfEmployedPage />} />
+                        <Route path="/bank/savings" element={<SavingsPage />} />
+                        <Route path="/bank/transfer/phone" element={<TransferPhonePage />} />
+                        <Route path="/bank/transfer/details" element={<TransferDetailsPage />} />
+                        <Route path="/bank/pay/mobile" element={<PayMobilePage />} />
+                        <Route path="/bank/pay/qr" element={<PayQRPage />} />
+                        <Route path="/bank/transactions" element={<TransactionsPage />} />
+                        <Route path="/bank/business" element={<BusinessPage />} />
                     </Route>
                 </Routes>
             </LocationProvider>
