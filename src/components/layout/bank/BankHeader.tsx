@@ -23,6 +23,14 @@ const BankHeader = () => {
     { path: '/bank/business', label: t('bank.business') },
     { path: '/bank/invest', label: t('bank.investments') },
     { path: '/bank/insurance', label: t('bank.insurance') },
+    { path: '/bank/savings', label: t('bank.savings') },
+    { path: '/bank/mobile', label: t('bank.mobile_banking') },
+    { path: '/bank/self-employed', label: t('bank.self_employed') },
+    { path: '/bank/transactions', label: t('bank.transactions') },
+    { path: '/bank/transfer/phone', label: t('bank.transfer_phone') },
+    { path: '/bank/transfer/details', label: t('bank.transfer_details') },
+    { path: '/bank/pay/mobile', label: t('bank.pay_mobile') },
+    { path: '/bank/pay/qr', label: t('bank.pay_qr') },
   ];
 
   const toggleMobileMenu = () => {
