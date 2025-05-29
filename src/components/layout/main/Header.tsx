@@ -18,6 +18,7 @@ const Header = () => {
 
   const menuItems = [
     { path: '/', label: 'Главная' },
+    { path: '/about', label: 'О проекте' },
     { path: '/map', label: 'Карта' },
     { path: '/market', label: 'Маркет' },
     { path: '/islam', label: 'Islam' },
@@ -32,16 +33,23 @@ const Header = () => {
   };
 
   return (
-    <header className="relative flex items-center justify-between px-4 py-3 border-b shadow-sm">
+    <header className="relative flex items-center justify-between px-4 sm:px-6 py-4 border-b shadow-sm bg-white">
       <div className="flex items-center">
-        <Link to="/" className="text-2xl font-bold mr-8">Birlik Live</Link>
+        <Link to="/" className="flex items-center">
+          <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white mr-3">
+            <span className="font-bold text-xl">B</span>
+          </div>
+          <span className="text-2xl font-bold mr-8">Birlik Live</span>
+        </Link>
         <nav className="hidden md:flex">
           <ul className="flex space-x-6">
             {menuItems.map((item) => (
               <li key={item.path}>
                 <Link 
                   to={item.path} 
-                  className={`text-sm font-medium ${isActive(item.path) ? 'border-b-2 border-blue-500' : 'hover:text-blue-500'}`}
+                  className={`text-sm font-medium py-2 ${isActive(item.path) 
+                    ? 'border-b-2 border-blue-600 text-blue-700' 
+                    : 'hover:text-blue-600 transition-colors duration-200'}`}
                 >
                   {item.label}
                 </Link>
@@ -52,13 +60,14 @@ const Header = () => {
       </div>
       <div className="flex items-center space-x-4">
         <LocationSelector />
-        <button className="p-2 rounded-full hover:bg-gray-100">
+        <button className="p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
           <Search size={20} />
         </button>
         <UserAccountMenu />
         <button 
-          className="md:hidden p-2 rounded-full hover:bg-gray-100"
+          className="md:hidden p-2 rounded-full hover:bg-gray-100 transition-colors duration-200"
           onClick={toggleMobileMenu}
+          aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -73,13 +82,33 @@ const Header = () => {
                 <li key={item.path}>
                   <Link 
                     to={item.path} 
-                    className={`block px-4 py-2 text-sm font-medium ${isActive(item.path) ? 'bg-blue-50 text-blue-500 border-l-4 border-blue-500' : 'hover:bg-gray-50'}`}
+                    className={`block px-4 py-3 text-sm font-medium ${isActive(item.path) 
+                      ? 'bg-blue-50 text-blue-600 border-l-4 border-blue-600' 
+                      : 'hover:bg-gray-50 transition-colors duration-200'}`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.label}
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link 
+                  to="/login" 
+                  className="block px-4 py-3 text-sm font-medium bg-blue-600 text-white m-4 rounded text-center hover:bg-blue-700 transition-colors duration-200"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Войти
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/register" 
+                  className="block px-4 py-3 text-sm font-medium border border-blue-600 text-blue-600 m-4 mt-0 rounded text-center hover:bg-blue-50 transition-colors duration-200"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Регистрация
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

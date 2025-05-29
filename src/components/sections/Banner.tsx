@@ -1,7 +1,22 @@
+import { Link } from 'react-router-dom';
+
 const Banner = () => {
   return (
-    <div className="w-full h-36 bg-gradient-to-r from-blue-500 to-green-400 flex items-center justify-center my-4">
-      <h2 className="text-4xl text-white font-bold drop-shadow-md">Скидки до 50%</h2>
+    <div className="w-full bg-gradient-to-r from-blue-600 to-blue-400 py-16 my-4">
+      <div className="max-w-screen-lg mx-auto p-8 text-center">
+        <h1 className="text-4xl md:text-5xl text-white font-bold mb-4 drop-shadow-md">
+          Платформа взаимопомощи через Web3
+        </h1>
+        <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
+          Инновационная экосистема для безопасных транзакций, цифровой идентификации и финансовых услуг нового поколения
+        </p>
+        <Link 
+          to="/register" 
+          className="bg-white hover:bg-gray-100 text-blue-600 font-bold py-3 px-8 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105"
+        >
+          Начать
+        </Link>
+      </div>
     </div>
   );
 };
