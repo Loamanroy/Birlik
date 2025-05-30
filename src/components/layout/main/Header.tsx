@@ -32,7 +32,7 @@ const Header = () => {
       items: [
         { path: '/map', label: 'Карта', icon: <Map size={18} /> },
         { path: '/market', label: 'Маркет', icon: <ShoppingBag size={18} /> },
-        { path: '/taxi', label: 'Такси', icon: <Car size={18} /> },
+        { path: '/kelemin', label: 'Путеводитель', icon: <Car size={18} /> },
         { path: '/delivery', label: 'Доставка', icon: <Truck size={18} /> },
       ]
     },

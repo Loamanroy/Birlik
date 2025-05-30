@@ -72,11 +72,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail size={16} className="mr-2 text-blue-400" />
-                <a href="mailto:info@birlik-live.kz" className="hover:text-blue-400 transition-colors duration-200">info@birlik-live.kz</a>
+                <a href="mailto:info@birlik.pro" className="hover:text-blue-400 transition-colors duration-200">info@birlik.pro</a>
               </li>
               <li className="flex items-center">
                 <Phone size={16} className="mr-2 text-blue-400" />
-                <a href="tel:+77771234567" className="hover:text-blue-400 transition-colors duration-200">+7 (777) 123-45-67</a>
+                <a href="tel:+79309649676" className="hover:text-blue-400 transition-colors duration-200">+7 (930) 964-96-76</a>
               </li>
               <li className="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-blue-400">

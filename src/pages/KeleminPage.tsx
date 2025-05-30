@@ -19,7 +19,7 @@ interface City {
   locations: Location[];
 }
 
-const BirlikTaxiPage = () => {
+const KeleminPage = () => {
   const { city } = useLocation();
   const [activeTab, setActiveTab] = useState<LocationType>('attractions');
   const [activeCity, setActiveCity] = useState<string | null>(null);
@@ -167,7 +167,7 @@ const BirlikTaxiPage = () => {
 
   return (
     <div className="py-8 px-4">
-      <h1 className="text-3xl font-bold mb-6">Birlik Taxi - Путеводитель по Казахстану</h1>
+      <h1 className="text-3xl font-bold mb-6">Kelemin - Путеводитель по Казахстану</h1>
       
       <div className="bg-white p-6 rounded-lg shadow mb-8">
         <div className="h-[250px] sm:h-[400px] rounded-lg relative z-10 mb-4">
@@ -257,4 +257,4 @@ const BirlikTaxiPage = () => {
   );
 };
 
-export default BirlikTaxiPage;
+export default KeleminPage;
