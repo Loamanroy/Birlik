@@ -67,22 +67,23 @@ const BankHeader = () => {
             <nav className="hidden md:flex">
               <ul className="flex space-x-6">
                 {menuItems.map((item) => (
-                    <li key={item.path}>
+                    <li key={item.path} className="group">
                       <Link
                           to={item.path}
-                          className={`text-sm font-medium text-white ${isActive(item.path) ? 'border-b-2 border-white' : 'hover:text-gray-200'}`}
+                          className={`text-sm font-medium text-white group-hover:text-gray-200 ${isActive(item.path) ? 'border-b-2 border-white' : ''}`}
                       >
                         {item.label}
                       </Link>
                     </li>
+
                 ))}
               </ul>
             </nav>
           </div>
           <div className="flex items-center space-x-4">
-            <Link 
-              to="/" 
-              className="flex items-center px-4 py-2 bg-white text-blue-600 rounded-md font-medium hover:bg-gray-100 transition-colors duration-200"
+            <Link
+                to="/"
+                className="flex items-center px-4 py-2 bg-white text-blue-600 rounded-md font-medium hover:bg-gray-100 transition-colors duration-200"
             >
               <Home size={16} className="mr-2" />
               <span>Вернуться на сайт</span>
