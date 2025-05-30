@@ -41,7 +41,7 @@ const Header = () => {
       label: 'Сообщество',
       items: [
         { path: '/islam', label: 'Islam', icon: <Book size={18} /> },
-        { path: '/kelemin', label: 'Kelemin', icon: <Navigation size={18} /> },
+        { path: '/birlik-taxi', label: 'Birlik Taxi', icon: <Navigation size={18} /> },
         { path: '/social', label: 'Соцсеть', icon: <Users size={18} /> },
       ]
     },

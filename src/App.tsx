@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage'
 import MapPage from './pages/MapPage'
 import MarketPage from './pages/MarketPage'
 import IslamPage from './pages/IslamPage'
-import KeleminPage from './pages/KeleminPage'
+import BirlikTaxiPage from './pages/BirlikTaxiPage'
 import DeliveryPage from './pages/DeliveryPage'
 import SocialPage from './pages/SocialPage'
 import AppsPage from './pages/AppsPage'
@@ -51,7 +51,7 @@ function App() {
                         <Route path="/market/product/:id" element={<ProductDetailPage/>}/>
                         <Route path="/taxi" element={<TaxiPage/>}/>
                         <Route path="/islam" element={<IslamPage/>}/>
-                        <Route path="/kelemin" element={<KeleminPage/>}/>
+                        <Route path="/birlik-taxi" element={<BirlikTaxiPage/>}/>
                         <Route path="/delivery" element={<DeliveryPage/>}/>
                         <Route path="/social" element={<SocialPage/>}/>
                         <Route path="/apps" element={<AppsPage/>}/>

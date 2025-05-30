@@ -1,9 +1,9 @@
 import MapComponent from '../shared/MapComponent';
 
-const Kelemin = () => {
+const BirlikTaxi = () => {
   return (
     <div className="my-8 px-4">
-      <h2 className="text-2xl font-bold mb-4">Kelemin</h2>
+      <h2 className="text-2xl font-bold mb-4">Birlik Taxi</h2>
       <div className="bg-white rounded-lg shadow p-4">
         <div className="flex flex-col sm:flex-row sm:space-x-4">
           <div className="w-full sm:w-1/2 mb-4 sm:mb-0">
@@ -30,7 +30,7 @@ const Kelemin = () => {
             <div className="bg-white rounded-lg overflow-hidden shadow h-48">
               <img 
                 src="https://images.unsplash.com/photo-1611068562065-994ba66501ba?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Путеводитель по Казахстану" 
+                alt="Birlik Taxi - Путеводитель по Казахстану" 
                 className="w-full h-full object-cover bg-gray-50"
               />
             </div>
@@ -45,4 +45,4 @@ const Kelemin = () => {
   );
 };
 
-export default Kelemin;
+export default BirlikTaxi;

@@ -44,7 +44,7 @@ const BankFooter = () => {
               <li><Link to="/map" className="text-gray-300 hover:text-white">Карта</Link></li>
               <li><Link to="/market" className="text-gray-300 hover:text-white">Маркет</Link></li>
               <li><Link to="/islam" className="text-gray-300 hover:text-white">Islam</Link></li>
-              <li><Link to="/kelemin" className="text-gray-300 hover:text-white">Kelemin</Link></li>
+              <li><Link to="/birlik-taxi" className="text-gray-300 hover:text-white">Birlik Taxi</Link></li>
             </ul>
           </div>
           
