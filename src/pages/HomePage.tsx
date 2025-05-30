@@ -1,7 +1,7 @@
 import Banner from '../components/sections/Banner';
 import Categories from '../components/sections/Categories';
 import Market from '../components/sections/Market';
-import Kelemin from '../components/sections/Kelemin';
+import BirlikTaxi from '../components/sections/BirlikTaxi';
 import Delivery from '../components/sections/Delivery';
 import Recommendations from '../components/sections/Recommendations';
 
@@ -15,7 +15,7 @@ const HomePage = () => {
           <Market />
         </div>
         <div>
-          <Kelemin />
+          <BirlikTaxi />
         </div>
       </div>
       <Delivery />

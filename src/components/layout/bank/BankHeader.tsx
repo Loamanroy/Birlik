@@ -1,4 +1,4 @@
-import { Menu, X, User, LogOut } from 'lucide-react';
+import { Menu, X, User, LogOut, Home } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -80,12 +80,20 @@ const BankHeader = () => {
             </nav>
           </div>
           <div className="flex items-center space-x-4">
+            <Link 
+              to="/" 
+              className="flex items-center px-4 py-2 bg-white text-blue-600 rounded-md font-medium hover:bg-gray-100 transition-colors duration-200"
+            >
+              <Home size={16} className="mr-2" />
+              <span>Вернуться на сайт</span>
+            </Link>
+            
             <LanguageSwitcher />
           
           {isLoggedIn ? (
             <div className="relative">
               <button 
-                className="flex items-center justify-center w-10 h-10 rounded-full bg-white hover:bg-gray-100"
+                className="flex items-center justify-center w-10 h-10 rounded-full bg-white hover:bg-gray-100 transition-colors duration-200"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 <User size={20} className="text-blue-600" />
@@ -97,14 +105,14 @@ const BankHeader = () => {
                     <p className="text-sm font-medium text-gray-700">{userName}</p>
                   </div>
                   <Link 
-                    to="/bank/profile" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    to="/profile" 
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {t('bank.profile')}
                   </Link>
                   <button
-                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
                     onClick={handleLogout}
                   >
                     <div className="flex items-center">
@@ -117,10 +125,10 @@ const BankHeader = () => {
             </div>
           ) : (
             <>
-              <Link to="/bank/login" className="px-4 py-2 bg-white text-blue-600 rounded-md font-medium hover:bg-gray-100">
+              <Link to="/bank/login" className="px-4 py-2 bg-white text-blue-600 rounded-md font-medium hover:bg-gray-100 transition-colors duration-200">
                 {t('common.login')}
               </Link>
-              <Link to="/bank/register" className="px-4 py-2 bg-green-500 text-white rounded-md font-medium hover:bg-green-600">
+              <Link to="/bank/register" className="px-4 py-2 bg-green-500 text-white rounded-md font-medium hover:bg-green-600 transition-colors duration-200">
                 {t('common.register')}
               </Link>
             </>

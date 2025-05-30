@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Search, Plus } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { products, ProductCategory } from '../data/products';
-import { useLocation } from '../contexts/LocationContext';
+import { useLocation as useLocationContext } from '../contexts/LocationContext';
 
 const MarketPage = () => {
-  const { city } = useLocation();
+  const { city } = useLocationContext();
+  const [searchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState('');
   const [priceRange, setPriceRange] = useState([0, 1000000]);
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory | 'all'>('all');
@@ -27,6 +28,14 @@ const MarketPage = () => {
   useEffect(() => {
     setLocalProducts(products.filter(product => product.city === city));
   }, [city]);
+  
+  useEffect(() => {
+    const categoryParam = searchParams.get('category');
+    const validCategories: ProductCategory[] = ['clothing', 'electronics', 'home', 'transport', 'realty', 'services', 'kids', 'hobby', 'sports'];
+    if (categoryParam && (categoryParam === 'all' || validCategories.includes(categoryParam as ProductCategory))) {
+      setSelectedCategory(categoryParam as ProductCategory | 'all');
+    }
+  }, [searchParams]);
 
   const filteredProducts = localProducts.filter(product => {
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -138,12 +147,20 @@ const MarketPage = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {filteredProducts.map(product => (
                   <Link 
-                    to={`/bank/marketplace/product/${product.id}`} 
+                    to={`/market/product/${product.id}`} 
                     key={product.id} 
                     className="bg-white rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow"
                   >
                     <div className="h-40 sm:h-48 overflow-hidden">
-                      <img src={product.image} alt={product.name} className="w-full h-full object-cover bg-gray-50" />
+                      <img 
+                        src={product.image} 
+                        alt={product.name} 
+                        className="w-full h-full object-cover bg-gray-50" 
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = 'https://images.unsplash.com/photo-1560343090-f0409e92791a?q=80&w=1964&auto=format&fit=crop';
+                        }}
+                      />
                     </div>
                     <div className="p-4">
                       <h3 className="font-medium">{product.name}</h3>

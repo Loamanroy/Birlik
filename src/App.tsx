@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage'
 import MapPage from './pages/MapPage'
 import MarketPage from './pages/MarketPage'
 import IslamPage from './pages/IslamPage'
-import KeleminPage from './pages/KeleminPage'
+import BirlikTaxiPage from './pages/BirlikTaxiPage'
 import DeliveryPage from './pages/DeliveryPage'
 import SocialPage from './pages/SocialPage'
 import AppsPage from './pages/AppsPage'
@@ -19,6 +19,7 @@ import BankLayout from "@/components/layout/BankLayout.tsx";
 import InternetBankPage from "@/pages/InternetBankPage.tsx";
 import RealEstatePage from "@/pages/RealEstatePage.tsx";
 import TaxiPage from "@/pages/TaxiPage.tsx";
+import ProductDetailPage from "@/pages/ProductDetailPage.tsx";
 
 import InsurancePage from "@/pages/bank/InsurancePage.tsx";
 import MobilePage from "@/pages/bank/MobilePage.tsx";
@@ -46,8 +47,11 @@ function App() {
                     <Route element={<MainLayout/>}>
                         <Route path="/" element={<HomePage/>}/>
                         <Route path="/map" element={<MapPage/>}/>
+                        <Route path="/market" element={<MarketPage/>}/>
+                        <Route path="/market/product/:id" element={<ProductDetailPage/>}/>
+                        <Route path="/taxi" element={<TaxiPage/>}/>
                         <Route path="/islam" element={<IslamPage/>}/>
-                        <Route path="/kelemin" element={<KeleminPage/>}/>
+                        <Route path="/birlik-taxi" element={<BirlikTaxiPage/>}/>
                         <Route path="/delivery" element={<DeliveryPage/>}/>
                         <Route path="/social" element={<SocialPage/>}/>
                         <Route path="/apps" element={<AppsPage/>}/>
@@ -73,6 +77,7 @@ function App() {
                         <Route path="/bank/real-estate" element={<RealEstatePage />} />
                         <Route path="/bank/taxi" element={<TaxiPage />} />
                         <Route path="/bank/marketplace" element={<MarketPage />} />
+                        <Route path="/bank/marketplace/product/:id" element={<ProductDetailPage />} />
                         <Route path="/bank/digital" element={<DigitalBankingPage />} />
                         <Route path="/bank/automotive" element={<AutomotivePage />} />
                         <Route path="/bank/logistics" element={<LogisticsPage />} />

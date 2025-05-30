@@ -14,7 +14,78 @@
 .animate-marquee {
   animation: marquee 30s linear infinite;
 }
+
 @layer base {
+  body {
+    @apply font-sans bg-neutral-50 text-neutral-900;
+  }
+  
+  h1 {
+    @apply text-3xl font-bold mb-4;
+  }
+  
+  h2 {
+    @apply text-2xl font-bold mb-3;
+  }
+  
+  h3 {
+    @apply text-xl font-bold mb-2;
+  }
+  
+  .container {
+    @apply max-w-screen-lg mx-auto px-4;
+  }
+  
+  /* Interactive elements with transitions */
+  a {
+    @apply transition-colors duration-200;
+  }
+  
+  a:not(.no-hover) {
+    @apply hover:text-blue-600;
+  }
+  
+  button, 
+  [role="button"] {
+    @apply transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow-md transition-all duration-200 transform hover:scale-105;
+  }
+  
+  .form-input {
+    @apply w-full p-2 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium mb-1;
+  }
+  
+  .form-error {
+    @apply text-red-600 text-sm mt-1;
+  }
+  
+  /* Card animations */
+  .card {
+    @apply transition-all duration-300 hover:shadow-lg;
+  }
+  
+  /* Navigation animations */
+  .nav-item {
+    @apply transition-all duration-200 hover:bg-gray-100 rounded-md;
+  }
+  
+  /* Icon animations */
+  .icon {
+    @apply transition-transform duration-200 hover:scale-110;
+  }
+  
+  /* Social media icons */
+  .social-icon {
+    @apply transition-all duration-200 hover:text-blue-600 hover:scale-110;
+  }
+
   :root {
     --radius: 0.5rem
   ;

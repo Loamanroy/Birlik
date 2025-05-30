@@ -147,11 +147,11 @@ export const products: Product[] = [
     description: 'Двухкамерный холодильник Samsung с системой No Frost, объем 500 литров. Энергоэффективность класса A++. Цвет - серебристый. На гарантии 1 год.',
     price: 350000, 
     category: 'home', 
-    image: 'https://images.unsplash.com/photo-1635619833085-06c0269d4578',
+    image: 'https://images.unsplash.com/photo-1536854704214-f489b6693769?q=80&w=2075&auto=format&fit=crop',
     images: [
-      'https://images.unsplash.com/photo-1536854704214-f489b6693769?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      'https://images.unsplash.com/photo-1536854704214-f489b6693769?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      'https://images.unsplash.com/photo-1536854704214-f489b6693769?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      'https://images.unsplash.com/photo-1536854704214-f489b6693769?q=80&w=2075&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?q=80&w=2070&auto=format&fit=crop'
     ],
     city: 'Караганда',
     address: 'пр. Бухар-Жырау 59',
@@ -185,11 +185,11 @@ export const products: Product[] = [
     description: 'Детская коляска Anex Sport 3 в 1 (люлька, прогулочный блок, автокресло). Состояние отличное, использовалась 6 месяцев. Цвет - графитовый. В комплекте дождевик, москитная сетка, сумка для мамы.',
     price: 120000, 
     category: 'kids', 
-    image: 'https://images.unsplash.com/photo-1591881406586-e9d166140e81',
+    image: 'https://images.unsplash.com/photo-1519689680058-324335c77eba',
     images: [
-      'https://images.unsplash.com/photo-1591881406586-e9d166140e81',
       'https://images.unsplash.com/photo-1519689680058-324335c77eba',
-      'https://images.unsplash.com/photo-1519689680058-324335c77eba'
+      'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4',
+      'https://images.unsplash.com/photo-1604467707321-70d5ac45adda'
     ],
     city: 'Алматы',
     address: 'ул. Жандосова 58',
@@ -318,11 +318,11 @@ export const products: Product[] = [
     description: 'Инверторный кондиционер Mitsubishi Electric, мощность охлаждения 5 кВт, обогрева 5.8 кВт. Класс энергоэффективности A+++. Wi-Fi управление.',
     price: 320000, 
     category: 'home', 
-    image: 'https://images.unsplash.com/photo-1628916113671-02a4a265ae4c',
+    image: 'https://images.unsplash.com/photo-1581275288578-bfb98aa25dcc',
     images: [
-      'https://images.unsplash.com/photo-1628916113671-02a4a265ae4c',
       'https://images.unsplash.com/photo-1581275288578-bfb98aa25dcc',
-      'https://images.unsplash.com/photo-1581275288578-bfb98aa25dcc'
+      'https://images.unsplash.com/photo-1552242718-c5360894aecd',
+      'https://images.unsplash.com/photo-1551808525-51a94da548ce'
     ],
     city: 'Алматы',
     address: 'мкр. Орбита-3, д. 17',

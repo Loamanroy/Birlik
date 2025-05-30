@@ -75,7 +75,7 @@ const CryptoTicker: React.FC = () => {
   }
 
   return (
-    <div className="bg-gray-800 text-white py-2 overflow-hidden">
+    <div className="bg-gray-800 text-white py-2 overflow-hidden shadow-md">
       <div className="animate-marquee flex whitespace-nowrap">
         {cryptoPrices.map((crypto) => (
           <div key={crypto.id} className="flex items-center mx-4">
