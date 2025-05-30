@@ -5,7 +5,6 @@ import MapPage from './pages/MapPage'
 import MarketPage from './pages/MarketPage'
 import IslamPage from './pages/IslamPage'
 import KeleminPage from './pages/KeleminPage.tsx'
-import DeliveryPage from './pages/DeliveryPage'
 import SocialPage from './pages/SocialPage'
 import AppsPage from './pages/AppsPage'
 import LoginPage from './pages/LoginPage'
@@ -38,6 +37,8 @@ import LogisticsPage from "./pages/bank/LogisticsPage";
 import ExchangePage from "./pages/bank/ExchangePage";
 import IslamicBankingPage from "./pages/bank/IslamicBankingPage";
 import BankDeliveryPage from "./pages/bank/DeliveryPage";
+import AddProductPage from "@/pages/AddProductPage.tsx";
+import AboutPage from "@/pages/AboutPage.tsx";
 
 function App() {
     return (
@@ -46,13 +47,14 @@ function App() {
                 <Routes>
                     <Route element={<MainLayout/>}>
                         <Route path="/" element={<HomePage/>}/>
+                        <Route path="/about" element={<AboutPage/>}/>
                         <Route path="/map" element={<MapPage/>}/>
                         <Route path="/market" element={<MarketPage/>}/>
+                        <Route path="/market/add" element={<AddProductPage/>}/>
                         <Route path="/market/product/:id" element={<ProductDetailPage/>}/>
                         <Route path="/birlik-taxi" element={<TaxiPage/>}/>
                         <Route path="/islam" element={<IslamPage/>}/>
                         <Route path="/kelemin" element={<KeleminPage/>}/>
-                        <Route path="/delivery" element={<DeliveryPage/>}/>
                         <Route path="/social" element={<SocialPage/>}/>
                         <Route path="/apps" element={<AppsPage/>}/>
                         <Route path="/login" element={<LoginPage/>}/>

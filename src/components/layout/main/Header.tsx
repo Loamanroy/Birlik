@@ -1,4 +1,4 @@
-import { Search, Menu, X, ChevronDown, ChevronRight, Home, Map, ShoppingBag, Book, Navigation, Truck, Users, Layers, Car } from 'lucide-react';
+import { Search, Menu, X, ChevronDown, ChevronRight, Home, Map, ShoppingBag, Book, Navigation, Users, Layers, Car } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import UserAccountMenu from '@/components/user/UserAccountMenu';
 import LocationSelector from '@/components/shared/LocationSelector';
@@ -33,7 +33,6 @@ const Header = () => {
         { path: '/map', label: 'Карта', icon: <Map size={18} /> },
         { path: '/market', label: 'Маркет', icon: <ShoppingBag size={18} /> },
         { path: '/kelemin', label: 'Путеводитель', icon: <Car size={18} /> },
-        { path: '/delivery', label: 'Доставка', icon: <Truck size={18} /> },
       ]
     },
     {

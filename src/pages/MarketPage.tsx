@@ -55,7 +55,7 @@ const MarketPage = () => {
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold">Marketplace Dashboard</h1>
           <Link 
-            to="/bank/marketplace/add" 
+            to="/market/add"
             className="bg-blue-500 text-white px-4 py-2 rounded-md flex items-center"
           >
             <Plus size={18} className="mr-1" />
